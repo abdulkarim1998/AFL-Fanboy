@@ -1,16 +1,36 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { AllTeamsComponent } from './components/all-teams/all-teams.component';
+import { SingleTeamComponent } from './components/single-team/single-team.component';
+import { TipComponent } from './class/tip/tip.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    NavbarComponent,
+    AllTeamsComponent,
+    SingleTeamComponent,
+    TipComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: 'teams', component: AllTeamsComponent },
+      {
+        path: '**',
+        component: AllTeamsComponent,
+      },
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

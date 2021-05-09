@@ -1,0 +1,30 @@
+#header {
+  display: flex;
+  background-color: rgb(171, 203, 231);
+}
+#website-logo {
+  margin: 10px;
+  height: 70px;
+}
+
+#website-name {
+  color: black;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.login-buttons {
+  position: absolute;
+  right: 50px;
+  top: 25px;
+}
+button {
+  margin-left: 8px;
+}

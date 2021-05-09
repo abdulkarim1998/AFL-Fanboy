@@ -1,0 +1,18 @@
+#navbar {
+  margin: 0px;
+  height: 60px;
+  background-color: rgb(106, 135, 161);
+}
+
+button {
+  background-color: transparent;
+  height: 60px;
+  width: 70px;
+  border: none;
+  margin: 5px;
+  margin-top: 0px;
+}
+
+button:hover {
+  background-color: rgb(91, 110, 126);
+}
