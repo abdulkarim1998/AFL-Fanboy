@@ -1,8 +1,12 @@
 <div id="outer-shell">
   <!-- <img src="{{ team.logo }}" alt="" /> -->
-  <img src="https://squiggle.com.au/{{ team.logo }}" alt="" />
+  <img class="mt-10" src="https://squiggle.com.au/{{ team.logo }}" alt="" />
   <div id="inner-shell">
-    <p>ID : {{ team.id }}</p>
-    <p>Team Name : {{ team.name }}</p>
+    <p>
+      ID: <strong>{{ team.id }}</strong>
+    </p>
+    <p>
+      Team Name: <strong>{{ team.name }}</strong>
+    </p>
   </div>
 </div>

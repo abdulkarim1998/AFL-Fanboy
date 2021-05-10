@@ -1,14 +1,29 @@
 #outer-shell {
   display: flex;
-  background-color: lightcyan;
+  background-color: rgb(224, 255, 255);
   margin-bottom: 10px;
+  border: 2px solid rgb(191, 233, 233);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#outer-shell:hover {
+  background-color: rgb(114, 224, 224);
+  border: 2px solid lightblue;
+  box-shadow: 0 0.5em 0.5em 5px blue;
+  transform: translateY(-0.25em);
+  cursor: pointer;
 }
 
 #inner-shell {
+  font-size: 15px;
   margin-left: 15px;
   margin-bottom: 10px;
 }
 
 img {
-  height: 75px;
+  margin-top: 8px;
+  margin-left: 5px;
+  height: 60px;
+  max-height: 70px;
 }
