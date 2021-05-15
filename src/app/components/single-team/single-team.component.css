@@ -5,6 +5,7 @@
   border: 2px solid rgb(191, 233, 233);
   border-radius: 10px;
   transition: 0.3s;
+  height: 100px;
 }
 
 #outer-shell:hover {

@@ -1,0 +1,10 @@
+<div>
+  <h2>ALL TIPS</h2>
+  <div id="tips-container" class="container mt-5">
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let tip of tips">
+        <app-tip [tip]="tip"></app-tip>
+      </div>
+    </div>
+  </div>
+</div>

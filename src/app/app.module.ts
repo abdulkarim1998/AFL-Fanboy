@@ -9,6 +9,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { AllTeamsComponent } from './components/all-teams/all-teams.component';
 import { SingleTeamComponent } from './components/single-team/single-team.component';
 import { TipComponent } from './class/tip/tip.component';
+import { AllTipsComponent } from './components/all-tips/all-tips.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,14 @@ import { TipComponent } from './class/tip/tip.component';
     AllTeamsComponent,
     SingleTeamComponent,
     TipComponent,
+    AllTipsComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'teams', component: AllTeamsComponent },
+      { path: 'tips', component: AllTipsComponent },
       {
         path: '**',
         component: AllTeamsComponent,

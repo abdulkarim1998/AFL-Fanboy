@@ -37,9 +37,13 @@ export class AllTeamsComponent implements OnInit {
     //   },
     // ];
 
-    this.dataFetch.getTips().subscribe((tips) => {
-      console.log(tips);
-    });
+    // this.dataFetch.getTips().subscribe((tips) => {
+    //   const temp = tips.filter((x) => x.hteamid === 1);
+
+    //   const temp2 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+    //   console.log(temp);
+    // });
 
     this.dataFetch.getTeams().subscribe((teams) => {
       this.teams = teams;
