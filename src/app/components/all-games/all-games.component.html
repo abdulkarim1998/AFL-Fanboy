@@ -1,0 +1,10 @@
+<div>
+  <div id="tips-container" class="container mt-5">
+    <h2>All Games</h2>
+    <div class="row">
+      <div class="col-sm-4" *ngFor="let game of games">
+        <app-single-game [game]="game"></app-single-game>
+      </div>
+    </div>
+  </div>
+</div>

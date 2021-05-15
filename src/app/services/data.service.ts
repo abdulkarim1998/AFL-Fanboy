@@ -1,3 +1,4 @@
+import { Game } from './../class/game';
 import { Tip } from './../class/tip';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -19,6 +20,44 @@ export class DataService {
         })
       )
     );
+  }
+
+  getGames(): Observable<Game[]> {
+    return this.http
+      .get('https://api.squiggle.com.au/?q=games;year=2021')
+      .pipe(
+        map((data: any) =>
+          data.games.map(
+            (item: any) =>
+              new Game(
+                item.is_grand_final,
+                item.hbehinds,
+                item.abehinds,
+                item.hteam,
+                item.round,
+                item.hgoals,
+                item.winnerteamid,
+                item.ateamid,
+                item.is_final,
+                item.venue,
+                item.date,
+                item.year,
+                item.complete,
+                item.ascore,
+                item.tz,
+                item.updated,
+                item.agoals,
+                item.id,
+                item.ateam,
+                item.winner,
+                item.hscore,
+                item.hteamid,
+                item.roundname,
+                item.localtime
+              )
+          )
+        )
+      );
   }
 
   getTips(): Observable<Tip[]> {

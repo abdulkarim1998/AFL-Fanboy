@@ -1,0 +1,29 @@
+<div id="outer-shell">
+  <span> Home Team </span> <span class="ateam-span">Away Team</span> <br />
+  <span class="inner-span"
+    ><strong>{{ game.hteam }}</strong>
+  </span>
+  <span class="ateam-span inner-span"
+    ><strong>{{ game.ateam }}</strong></span
+  >
+  <br />
+
+  <img src="https://squiggle.com.au/{{ hteamLogo }}" alt="" />
+  <img id="ateam-img" src="https://squiggle.com.au/{{ ateamLogo }}" alt="" />
+  <div id="winner">
+    <span style="margin-left: 100px">Winner: </span>
+    <strong
+      ><span style="margin-left: 10px" id="tip-span">{{
+        game.winner
+      }}</span></strong
+    >
+  </div>
+  <div>
+    <span>H Score: </span>
+    <strong
+      ><span style="margin-left: 10px" class="ateam-span">{{
+        game.hscore
+      }}</span></strong
+    >
+  </div>
+</div>

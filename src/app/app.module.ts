@@ -10,6 +10,8 @@ import { AllTeamsComponent } from './components/all-teams/all-teams.component';
 import { SingleTeamComponent } from './components/single-team/single-team.component';
 import { TipComponent } from './class/tip/tip.component';
 import { AllTipsComponent } from './components/all-tips/all-tips.component';
+import { AllGamesComponent } from './components/all-games/all-games.component';
+import { SingleGameComponent } from './components/single-game/single-game.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AllTipsComponent } from './components/all-tips/all-tips.component';
     SingleTeamComponent,
     TipComponent,
     AllTipsComponent,
+    AllGamesComponent,
+    SingleGameComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { AllTipsComponent } from './components/all-tips/all-tips.component';
     RouterModule.forRoot([
       { path: 'teams', component: AllTeamsComponent },
       { path: 'tips', component: AllTipsComponent },
+      { path: '', component: AllGamesComponent },
       {
         path: '**',
         component: AllTeamsComponent,

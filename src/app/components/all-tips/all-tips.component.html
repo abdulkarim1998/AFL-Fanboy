@@ -1,5 +1,31 @@
 <div>
-  <h2>ALL TIPS</h2>
+  <h2>{{ selectedTeamID || "ALL TIPS" }}</h2>
+  <div style="margin-left: 50px" class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton1"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      {{ selectedTeamID || "Select Team" }}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li>
+        <a class="dropdown-item" value="" (click)="clearSelection()">None</a>
+      </li>
+
+      <li>
+        <a
+          class="dropdown-item"
+          *ngFor="let team of teams"
+          value="{{ team.id }}"
+          (click)="selectChangeHandler(team)"
+          >{{ team.name }}</a
+        >
+      </li>
+    </ul>
+  </div>
   <div id="tips-container" class="container mt-5">
     <div class="row">
       <div class="col-sm-4" *ngFor="let tip of tips">
