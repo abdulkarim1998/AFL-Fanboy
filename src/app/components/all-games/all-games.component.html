@@ -35,6 +35,15 @@
       Won Only
     </button>
 
+    <button
+      style="margin-left: 10px"
+      class="btn btn-primary"
+      *ngIf="selectedTeamID"
+      (click)="upcommingOnly()"
+    >
+      Upcomming games
+    </button>
+
     <div
       *ngIf="selectedTeamID"
       style="margin-left: 10px; display: inline"

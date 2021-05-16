@@ -14,7 +14,7 @@
     <span style="margin-left: 100px">Winner: </span>
     <strong
       ><span style="margin-left: 10px" id="tip-span">{{
-        game.winner
+        game.winner || "N/A"
       }}</span></strong
     >
   </div>
@@ -42,6 +42,13 @@
     <strong
       ><span style="margin-left: 10px" class="ateam-span">{{
         game.venue
+      }}</span></strong
+    >
+    <br />
+    <span style="margin-left: 95px">Date: </span>
+    <strong
+      ><span style="margin-left: 10px" class="ateam-span">{{
+        game.date
       }}</span></strong
     >
   </div>

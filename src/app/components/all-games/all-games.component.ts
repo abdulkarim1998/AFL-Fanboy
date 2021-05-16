@@ -114,6 +114,17 @@ export class AllGamesComponent implements OnInit {
     this.x = this.games.length;
   }
 
+  upcommingOnly() {
+    this.games = this.pureGames.filter(
+      (game) =>
+        (game.hteam === this.selectedTeamID ||
+          game.ateam === this.selectedTeamID) &&
+        game.year === this.selectedYear &&
+        game.winner === null
+    );
+    this.x = this.games.length;
+  }
+
   numberOfRounds(index: number) {
     this.x = index;
   }
