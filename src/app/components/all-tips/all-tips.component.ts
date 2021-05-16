@@ -31,8 +31,6 @@ export class AllTipsComponent implements OnInit {
       this.tips = tips.filter(
         (tip) => tip.hteamid === team.id || tip.ateamid === team.id
       );
-
-      // console.log(tips.filter((tip) => tip.hteamid === team.id));
     });
   }
 

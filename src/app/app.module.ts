@@ -30,6 +30,7 @@ import { SingleGameComponent } from './components/single-game/single-game.compon
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'teams', component: AllTeamsComponent },
+      { path: 'games', component: AllGamesComponent },
       { path: 'tips', component: AllTipsComponent },
       { path: '', component: AllGamesComponent },
       {

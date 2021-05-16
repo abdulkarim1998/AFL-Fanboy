@@ -1,6 +1,71 @@
 <div>
+  <h2>{{ selectedTeamID || "All Games" }}</h2>
+  <div style="margin-left: 50px" class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton1"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      {{ selectedTeamID || "Select Team" }}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li>
+        <a class="dropdown-item" (click)="clearSelection()" value="">None</a>
+      </li>
+
+      <li>
+        <a
+          class="dropdown-item"
+          *ngFor="let team of teams"
+          value="{{ team.id }}"
+          (click)="selectChangeHandler(team)"
+          >{{ team.name }}</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div style="margin-left: 50px" class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton1"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      {{ selectedYear || "2021" }}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li>
+        <a class="dropdown-item" (click)="clearYearSelection()" value="0"
+          >All</a
+        >
+      </li>
+
+      <li>
+        <a class="dropdown-item" (click)="changeYearHandler(2021)" value="2021"
+          >2021</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-item" (click)="changeYearHandler(2020)" value="2020"
+          >2020</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-item" (click)="changeYearHandler(2019)" value="2019"
+          >2019</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-item" (click)="changeYearHandler(2018)" value="2018"
+          >2018</a
+        >
+      </li>
+    </ul>
+  </div>
   <div id="tips-container" class="container mt-5">
-    <h2>All Games</h2>
     <div class="row">
       <div class="col-sm-4" *ngFor="let game of games">
         <app-single-game [game]="game"></app-single-game>

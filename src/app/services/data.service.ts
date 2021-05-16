@@ -24,7 +24,7 @@ export class DataService {
 
   getGames(): Observable<Game[]> {
     return this.http
-      .get('https://api.squiggle.com.au/?q=games;year=2021')
+      .get('https://api.squiggle.com.au/?q=games')
       .pipe(
         map((data: any) =>
           data.games.map(

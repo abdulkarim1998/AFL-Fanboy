@@ -22,7 +22,20 @@
     <span>H Score: </span>
     <strong
       ><span style="margin-left: 10px" class="ateam-span">{{
-        game.hscore
+        game.hscore || "N/A"
+      }}</span></strong
+    >
+    <span style="margin-left: 80px">A Score: </span>
+    <strong
+      ><span style="margin-left: 10px" class="ateam-span">{{
+        game.ascore || "N/A"
+      }}</span></strong
+    >
+    <br />
+    <span style="margin-left: 100px">Year: </span>
+    <strong
+      ><span style="margin-left: 10px" class="ateam-span">{{
+        game.year
       }}</span></strong
     >
   </div>
