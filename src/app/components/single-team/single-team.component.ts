@@ -1,5 +1,6 @@
 import { Team } from './../../class/team';
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-single-team',
@@ -9,7 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SingleTeamComponent implements OnInit {
   @Input() team: Team;
 
-  constructor() {}
+  constructor(private route: Router) {}
 
   ngOnInit(): void {}
 }

@@ -1,5 +1,6 @@
 <div>
   <h2>{{ selectedTeamID || "All Games" }}</h2>
+
   <div style="margin-left: 50px" class="dropdown">
     <button
       class="btn btn-secondary dropdown-toggle"
@@ -25,8 +26,47 @@
         >
       </li>
     </ul>
+    <button
+      style="margin-left: 10px"
+      class="btn btn-primary"
+      *ngIf="selectedTeamID"
+      (click)="wonOnly()"
+    >
+      Won Only
+    </button>
+
+    <div
+      *ngIf="selectedTeamID"
+      style="margin-left: 10px; display: inline"
+      class="dropdown"
+    >
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        {{ x || "Select number" }}
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li>
+          <a
+            class="dropdown-item"
+            *ngFor="let i of counter"
+            (click)="numberOfRounds(i)"
+            value="{{ i }}"
+            >{{ i }}</a
+          >
+        </li>
+
+        <li>
+          <a class="dropdown-item" (click)="showAllRounds()">All</a>
+        </li>
+      </ul>
+    </div>
   </div>
-  <div style="margin-left: 50px" class="dropdown">
+  <div style="margin-left: 50px; margin-top: 5px" class="dropdown">
     <button
       class="btn btn-secondary dropdown-toggle"
       type="button"
@@ -34,7 +74,7 @@
       data-bs-toggle="dropdown"
       aria-expanded="false"
     >
-      {{ selectedYear || "2021" }}
+      {{ selectedYear || "All" }}
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
       <li>
@@ -67,7 +107,7 @@
   </div>
   <div id="tips-container" class="container mt-5">
     <div class="row">
-      <div class="col-sm-4" *ngFor="let game of games">
+      <div class="col-sm-4" *ngFor="let game of games | slice: 0:x">
         <app-single-game [game]="game"></app-single-game>
       </div>
     </div>

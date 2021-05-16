@@ -29,10 +29,11 @@ import { SingleGameComponent } from './components/single-game/single-game.compon
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
+      { path: 'teams/:id', component: SingleTeamComponent },
       { path: 'teams', component: AllTeamsComponent },
       { path: 'games', component: AllGamesComponent },
       { path: 'tips', component: AllTipsComponent },
-      { path: '', component: AllGamesComponent },
+      { path: '', component: AllTeamsComponent },
       {
         path: '**',
         component: AllTeamsComponent,
